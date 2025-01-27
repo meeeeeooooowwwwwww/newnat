@@ -1,0 +1,12 @@
+name = "my-next-worker"
+type = "javascript"
+
+[build]
+command = "npm install && npm run build"
+cwd = "./worker"
+
+[workers_dev]
+route = "/news-api/*"
+
+[env.production]
+route = "https://yourdomain.com/news-api/*"
